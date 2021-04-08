@@ -1,5 +1,5 @@
-require('dotenv').config()
 import React from 'react'
+require('dotenv').config()
 
 
 const Map = (props) => {
