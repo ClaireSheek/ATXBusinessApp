@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import { Redirect } from 'react-router'
+import { Redirect } from 'react-router'
 import { TextField, Button } from '@material-ui/core'
 import { ThemeProvider } from '@material-ui/styles'
 import { createMuiTheme } from '@material-ui/core/styles';
@@ -12,81 +12,49 @@ const theme = createMuiTheme({
   },
 });
 
-
-const Login = (props) => {
-
-  const handleChange = (e) => {
-    console.log("User:", props.user)
-    props.user[e.target.name] = e.target.value
-
+class Login extends Component {
+  state = { 
+    loggedIn: false,
+    username: '',
+    password: ''
   }
 
-  const handleLogin = (e) => {
+  handleChange = (e) => {
+    const newState = { ...this.state }
+    newState[e.target.name] = e.target.value
+    this.setState(newState)
+  }
+
+  handleLogin = (e) => {
     e.preventDefault()
-    document.cookie = 'loggedIn=true;max-age=60x1000x5'
-    window.location.replace("/")
+    const payload = this.state
+    payload.loggedIn = true
+    this.props.loginUser(payload)
+    document.cookie = 'loggedIn=true;max-age=60x10000'
   }
-  return (
-    <ThemeProvider theme={theme}>
-        <form className='login' onSubmit={handleLogin}>
-          <TextField required 
-              onChange={handleChange}
-              // value={props.user.username}
-              name="username"
-              className="input" label="Username" type="text"/>
-          <TextField required 
-              onChange={handleChange}
-              name='password'
-              className="input" label="Password" type="password"/>
-          <Button type="submit" variant="contained" color="primary">
-          Login
-          </Button>
-      </form>
-    </ThemeProvider>
-  )
+
+  render() {
+    return (
+        <ThemeProvider theme={theme}>
+            <form className='form' onSubmit={this.handleLogin}>
+              <TextField required 
+                  onChange={this.handleChange}
+                  value={this.state.username}
+                  name="username"
+                  className="input" label="Username" type="text"/>
+              <TextField required 
+                  onChange={this.handleChange}
+                  name="password"
+                  value={this.state.password}
+                  className="input" label="Password" type="password"/>
+              <Button type="submit" variant="contained" color="primary">
+              Login            
+                {this.state.loggedIn ? <Redirect to="/" /> : null}
+              </Button>
+          </form>
+        </ThemeProvider>
+    );
+  }
 }
 
-export default Login
-
-
-// class Login extends Component {
-//   state = {
-//     username: '',
-//     password: ''
-//   }
-
-//   handleChange = (e) => {
-//     // console.log("User:", this.state)
-//     const state = { ...this.state }
-//     state[e.target.name] = e.target.value
-//     this.setState(state)
-//   }
-
-//   handleLogin = (e) => {
-//     e.preventDefault()
-//     document.cookie = 'loggedIn=true;max-age=60x1000x5'
-//     window.location.replace("/")
-//   }
-//   render() {
-//     return (
-//         <ThemeProvider theme={theme}>
-//             <form className='login' onSubmit={this.handleLogin}>
-//               <TextField required 
-//                   onChange={this.handleChange}
-//                   // value={props.user.username}
-//                   name="username"
-//                   className="input" label="Username" type="text"/>
-//               <TextField required 
-//                   onChange={this.handleChange}
-//                   // value={props.user.password}
-//                   className="input" label="Password" type="password"/>
-//               <Button type="submit" variant="contained" color="primary">
-//               Login
-//               </Button>
-//           </form>
-//         </ThemeProvider>
-//     );
-//   }
-// }
-
-// export default Login;
+export default Login;

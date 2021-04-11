@@ -14,8 +14,8 @@
   }
 }
 
-//Login Component
-.login{
+//form Components
+.form{
   @include flex-center(column, center, center);
   margin: 10vh auto;
   width: 25vw;
@@ -49,4 +49,12 @@ a{
     // color: white;
     color: #888888;
   }
+}
+
+.businessDetails{
+  display: flex;
+}
+
+.map{
+  margin: 10vh;
 }

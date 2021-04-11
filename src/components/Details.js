@@ -7,11 +7,10 @@ import Map from '../containers/Map'
 const Details = (props) => {
   // console.log(props.listings)
   const id = props.match.params.id
-  const business = props.listings.find(item => item.id == id)
-
+  const business = props.listings.find(item => item.id === Number(id))
 
   return (
-    <Container className="businessDetails" maxWidth="sm">
+    <Container maxWidth="sm">
       <div>
         <Typography variant="h3" gutterBottom>
           {business.name}
@@ -27,7 +26,7 @@ const Details = (props) => {
         </Typography>
       </div>
       <div>
-        <Map business={business}/>
+        <Map address={props.map}/>
       </div>
     </Container>
   )

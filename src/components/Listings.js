@@ -28,7 +28,7 @@ const Listings = (props) => {
               {props.listings.map((listing, index) => (
                   <TableRow key={listing.id}>
                       <TableCell component="th" scope="row">
-                        <Link to={`/listing/${listing.id}`}> {listing["name"]}</Link>
+                        <Link to={`/listing/${listing.id}`} onClick={() => props.updateMap(listing.address)}> {listing["name"]}</Link>
                       </TableCell>
                       <TableCell>{listing["description"]}</TableCell>
                       <TableCell>{listing["hours"]}</TableCell>

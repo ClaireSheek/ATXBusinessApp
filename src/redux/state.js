@@ -1,45 +1,85 @@
-export default {
-  user: {
+const exportObject = {
+  user: [{ 
+    loggedIn: false,
     username: '',
     password: ''
-  },
+  }],
+
   listings: [
     {
       "id": 1,
-      "name":"Pint House Pizza",
-      "description": "Pinthouse Pizza is a craft brewpub. Our goal: to serve award-winning beer and amazing pizza in a warm and inviting atmosphere.",
-      "hours": "11AM–11PM",
-      "address":"4729 Burnet Rd, Austin, TX 78756"
+      "name":"Austin Books & Comics",
+      "description": "Longtime shop featuring an array of comic books, plus graphic novels & pop culture paraphernalia.",
+      "hours": "11AM–7PM",
+      "address":"5002 N Lamar Blvd, Austin, TX 78751"
    },
    {
-    "id": 2,
-    "name":"Dolce Neve Gelato",
-    "description": "Dolce Neve. We chose this name, which in English means “Sweet Snow”, because snow is natural as our gelato and to remember that far in the past the first gelato was a mixture of snow, honey and fruit juices. Come visit us in our shop to enjoy a truly unforgettable experience!",
-    "hours": "12PM–9PM",
-    "address":"1713 S 1st St, Austin, TX 78704"
+      "id": 2,
+      "name":"Lucy in Disguise with Diamonds",
+      "description": "Enormous outpost offering costumes, vintage clothing, boas, masks, wigs, prop & other glitz.",
+      "hours": "11AM–7PM",
+      "address":"1506 S Congress Ave, Austin, TX 78704"
     },
     {
       "id": 3,
-      "name":"Dolce Neve Gelato",
-      "description": "Dolce Neve. We chose this name, which in English means “Sweet Snow”, because snow is natural as our gelato and to remember that far in the past the first gelato was a mixture of snow, honey and fruit juices. Come visit us in our shop to enjoy a truly unforgettable experience!",
-      "hours": "12PM–9PM",
-      "address":"1109 E 5th St Suite 170, Austin, TX 78702"
+      "name":"I Luv Video",
+      "description": "Independent shop rents & sells rare movies & TV shows, plus vintage toys & memorabilia.",
+      "hours": "Temporarily Closed",
+      "address":"4803 Airport Blvd, Austin, TX 78751"
     },
     {
       "id": 4,
-      "name":"888 Pan Asian Restaurant",
-      "description": "A menu true to its namesake with all things Asian from pho to pad thai, plus a buffet.",
-      "hours": "12PM–9:30PM",
-      "address":"2400 E Oltorf St #1A, Austin, TX 78741"
+      "name":"Tribe Comics and Games",
+      "description": "Spare setup featuring a vast selection of comic books, plus gaming supplies & collectibles.",
+      "hours": "10AM–8PM",
+      "address":"3005 S Lamar Blvd #d113, Austin, TX 78704"
     },
     {
       "id": 5,
-      "name":"Pint House Pizza",
-      "description": "Pinthouse Pizza is a craft brewpub. Our goal: to serve award-winning beer and amazing pizza in a warm and inviting atmosphere.",
-      "hours": "11AM–11PM",
-      "address":"4729 Burnet Rd, Austin, TX 78756"
+      "name":"The Domain",
+      "description": "Outdoor mall offering a variety of upscale shops & department stores plus dining options & a cinema.",
+      "hours": "11AM–8PM",
+      "address":"11410 Century Oaks Terrace, Austin, TX 78758"
+    },
+        {
+      "id": 6,
+      "name":"Banger's Sausage House & Beer Garden",
+      "description": "Abundant sausages & beers on tap inside a rustic-chic cottage or outside in the leafy beer garden.",
+      "hours": "12–9PM",
+      "address":"79 Rainey St, Austin, TX 78701"
+   },
+   {
+      "id": 7,
+      "name":"June's",
+      "description": "Chic option for inventive New American fare, cocktails, beer & wine in a bright space with a patio.",
+      "hours": "11AM–10PM",
+      "address":"1722 S Congress Ave, Austin, TX 78704"
+    },
+    {
+      "id": 8,
+      "name":"Mozarts Coffee Roasters",
+      "description": "Beans flame-roasted on-site, plus bakery goods, frequent live music & patio seating on Lake Austin.",
+      "hours": "7AM–12AM",
+      "address":"3825 Lake Austin Blvd, Austin, TX 78703"
+    },
+    {
+      "id": 9,
+      "name":"4th Tap Brewing Co-Op ",
+      "description": "Spacious worker-owned microbrewery with picnic tables & a projector screen in an industrial taproom.",
+      "hours": "4–9PM",
+      "address":"10615 Metric Blvd, Austin, TX 78758"
+    },
+    {
+      "id": 10,
+      "name":"Whisler's",
+      "description": "Rustic-chic watering hole featuring handcrafted cocktails & a patio with frequent live music shows.",
+      "hours": "4PM–2AM",
+      "address":"1816 E 6th St, Austin, TX 78702"
     },
 
   ],
-  map: []
+  
+  map: "Austin,+TX"
 }
+
+export default exportObject;

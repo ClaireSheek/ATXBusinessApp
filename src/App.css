@@ -9,7 +9,7 @@
   margin: auto 20px;
 }
 
-.login {
+.form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27,11 +27,11 @@
   width: 25vw;
 }
 
-.login .input {
+.form .input {
   width: 100%;
 }
 
-.login Button {
+.form Button {
   margin: 20px;
   width: 100%;
 }
@@ -52,5 +52,15 @@ a {
 .welcomeBanner h6 {
   margin: 1vh 2vw;
   color: #888888;
+}
+
+.businessDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.map {
+  margin: 10vh;
 }
 /*# sourceMappingURL=App.css.map */

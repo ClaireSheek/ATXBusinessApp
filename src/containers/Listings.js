@@ -1,6 +1,8 @@
 import { connect } from 'react-redux'
 import Listings from '../components/Listings'
 import { removeListing } from '../redux/actions'
+import { updateMap } from '../redux/actions'
+
 
 const mapStateToProps = (state) => {
     return {
@@ -12,7 +14,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        removeListing: (index) => dispatch(removeListing(index))
+        removeListing: (index) => dispatch(removeListing(index)),
+        updateMap: (address) => dispatch(updateMap(address))
+
     }
 }
 
