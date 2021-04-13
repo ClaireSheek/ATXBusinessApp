@@ -1,10 +1,11 @@
 import React from 'react'
+require('dotenv').config()
 
 
 const Map = (props) => {
   let address = props.map
   let addressParam = address.toString().split(' ').join('+')
-  let apiKey = 'AIzaSyCvLozyym_Bo2mYiiW61EPctnFFTLBtZCM'
+  let apiKey = process.env.REACT_APP_G_KEY
 
 
   if(address === ''){ 
