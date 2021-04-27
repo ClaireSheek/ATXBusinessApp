@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ATXBusinessApp/static/css/main.758b62b6.chunk.css",
+    "main.js": "/ATXBusinessApp/static/js/main.91d43652.chunk.js",
+    "main.js.map": "/ATXBusinessApp/static/js/main.91d43652.chunk.js.map",
+    "runtime-main.js": "/ATXBusinessApp/static/js/runtime-main.74fa8657.js",
+    "runtime-main.js.map": "/ATXBusinessApp/static/js/runtime-main.74fa8657.js.map",
+    "static/js/2.3a8036a0.chunk.js": "/ATXBusinessApp/static/js/2.3a8036a0.chunk.js",
+    "static/js/2.3a8036a0.chunk.js.map": "/ATXBusinessApp/static/js/2.3a8036a0.chunk.js.map",
+    "static/js/3.ec5ae5aa.chunk.js": "/ATXBusinessApp/static/js/3.ec5ae5aa.chunk.js",
+    "static/js/3.ec5ae5aa.chunk.js.map": "/ATXBusinessApp/static/js/3.ec5ae5aa.chunk.js.map",
+    "index.html": "/ATXBusinessApp/index.html",
+    "static/css/main.758b62b6.chunk.css.map": "/ATXBusinessApp/static/css/main.758b62b6.chunk.css.map",
+    "static/js/2.3a8036a0.chunk.js.LICENSE.txt": "/ATXBusinessApp/static/js/2.3a8036a0.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.74fa8657.js",
+    "static/js/2.3a8036a0.chunk.js",
+    "static/css/main.758b62b6.chunk.css",
+    "static/js/main.91d43652.chunk.js"
+  ]
+}
